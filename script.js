@@ -1,103 +1,133 @@
-let laptops = [
-    {
-        id: 1,
-        brand: 'Samsung',
-        proc: 'Core-i5',
-        asccesM: 8,
-        color: 'Gray',
-        screen: 'FullHD',
-        price: 1000
-    },
-    {
-        id: 2,
-        brand: 'Acer',
-        proc: 'Core-i9',
-        asccesM: 16,
-        color: 'Black',
-        screen: 'HD',
-        price: 500
-    },
-    {
-        id: 3,
-        brand: 'Apple',
-        proc: 'M1 Ultra',
-        asccesM: 16,
-        color: 'Gray',
-        screen: 'Retina',
-        price: 1000
-    },
-    {
-        id: 4,
-        brand: 'asus',
-        proc: 'Core-i7',
-        asccesM: 16,
-        color: 'Blue',
-        screen: 'FullHD',
-        price: 1000
-    },
-    {
-        id: 5,
-        brand: 'Lenovo',
-        proc: 'AMD Ryzen-5',
-        asccesM: 32,
-        color: 'black',
-        screen: '2K',
-        price: 1000
-    },
-    {
-        id: 6,
-        brand: 'Samsung',
-        proc: 'Core-i5',
-        asccesM: 16,
-        color: 'Gray',
-        screen: 'HD',
-        price: 1000
-    },
-    {
-        id: 7,
-        brand: 'Acer',
-        proc: 'Core-i9',
-        asccesM: 24,
-        color: 'Black',
-        screen: 'HD',
-        price: 500
-    },
-    {
-        id: 8,
-        brand: 'Apple',
-        proc: 'M1 MAX',
-        asccesM: 16,
-        color: 'Midnight Blue',
-        screen: 'Retina 4K',
-        price: 1000
-    },
-    {
-        id: 9,
-        brand: 'Asus',
-        proc: 'Core-i7',
-        asccesM: 16,
-        color: 'Pink',
-        screen: 'fhd',
-        price: 1000
-    },
-    {
-        id: 10,
-        brand: 'Lenovo',
-        proc: 'Core-i7',
-        asccesM: 32,
-        color: 'Red',
-        screen: 'FullHD',
-        price: 1000
+for(let i = 5; i >= 0; i--){
+    for(let k = 0; k <= i; k++){
+        document.write('*')
     }
+    document.write('<br>')
+}
+console.log()
+
+
+
+
+let arr = [
+    {
+        id: Math.random(),
+        name: 'Timur',
+        info: {
+            school: '235',
+            faculity: 'SMM'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Imran',
+        info: {
+            school: 'ne izvestno',
+            faculity: 'programming'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Aminjon',
+        info: {
+            school: '444',
+            faculity: 'Dizayn'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Maxmud',
+        info: {
+            school: '777',
+            faculity: '3dsmax'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Muxammad',
+        info: {
+            school: '5555',
+            faculity: 'Backend'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Timur',
+        info: {
+            school: '235',
+            faculity: 'SMM'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Imran',
+        info: {
+            school: 'ne izvestno',
+            faculity: 'programming'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Aminjon',
+        info: {
+            school: '444',
+            faculity: 'Dizayn'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Maxmud',
+        info: {
+            school: '777',
+            faculity: '3dsmax'
+        },
+    },
+    
+    {
+        id: Math.random(),
+        name: 'Maxmud',
+        info: {
+            school: '777',
+            faculity: '3dsmax'
+        },
+    },
+    {
+        id: Math.random(),
+        name: 'Muxammad',
+        info: {
+            school: '5555',
+            faculity: 'Backend'
+        },
+    },
 ]
 
-let procent = 12 
-for(let item of laptops){
-   let maxxx = item.price - (procent * item.price / 100)
-   
-
-
-   console.log(maxxx);    
+let categories = [
+    {
+        course: ' SMM',
+        count: 0
+    },
+    {
+        course: 'PROGRAMMING',
+        count: 0
+    },
+    {
+        course: '     3DSMAX',
+        count: 0
+    },
+    {
+        course: ' DIZAYN',
+        count: 0
+    },
+    {       
+        course: '   BACKEND',
+        count: 0
+    },
+]
+for(let item of arr){
+    for(let type of categories){
+        if(item.info.faculity.toUpperCase().trim() === type.course.toUpperCase().trim()){
+            type.count++
+        }
+    }
 }
-
-
+console.log(categories)
